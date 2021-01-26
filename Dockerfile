@@ -34,8 +34,8 @@ RUN conda update --all
 
 RUN pip install fastapi uvicorn python-multipart
 
-EXPOSE 80
+EXPOSE 8080
 
 COPY ./main.py main.py
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
